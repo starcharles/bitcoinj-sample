@@ -43,9 +43,7 @@ public class DoubleSpend {
         kit.startAsync();
         kit.awaitRunning();
 
-        System.out.println("here1");
         System.out.println(kit.wallet());
-        System.out.println("here2");
 
         kit.wallet().getBalanceFuture(COIN, Wallet.BalanceType.AVAILABLE).get();
         Transaction tx1 = kit.wallet().createSend(Address.fromBase58(params, "muYPFNCv7KQEG2ZLM7Z3y96kJnNyXJ53wm"), CENT);
