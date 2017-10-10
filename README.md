@@ -1,6 +1,6 @@
 # Bitcoinj Samples Using Gradle 
 
-## prerequsities
+## install
 ```requisitity to running scripts
 
 gradle v4.x
