@@ -1,6 +1,6 @@
-Bitcoinj Samples Using Gradle 
+# Bitcoinj Samples Using Gradle 
 
-prerequsities
+## prerequsities
 ```requisitity to running scripts
 
 gradle v4.x
@@ -9,7 +9,7 @@ java8
 
 ```
 
-folders
+## folders
 
 ```cvs
 examples/ 
@@ -21,7 +21,7 @@ src/
 ```
 
     
-run sample scripts.
+## run sample scripts.
 
 - src/main/java/com/example/BackupToMnemonicSeed.java
 
