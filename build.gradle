@@ -15,5 +15,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'org.bitcoinj:bitcoinj-core:0.14.5'
+    compile 'org.slf4j:slf4j-log4j12:1.7.21' //logging library
+    compile files ('lib/bitcoinj-core-0.15-SNAPSHOT-bundled.jar') //segwit ブランチのjarファイル
+//    compile 'org.bitcoinj:bitcoinj-core:0.14.5'
 }
