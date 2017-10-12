@@ -6,7 +6,8 @@ apply plugin: 'application'
 
 sourceCompatibility = 1.8
 
-mainClassName = 'com.example.BackupToMnemonicSeed'
+mainClassName = 'com.example.SegwitAddress'
+//mainClassName = 'com.example.BackupToMnemonicSeed'
 //mainClassName = 'com.example.DoubleSpend'
 
 repositories {
