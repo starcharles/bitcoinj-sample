@@ -3,17 +3,42 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: "com.github.unafraid.gradle.git-repo-plugin"
 
 sourceCompatibility = 1.8
 
-mainClassName = 'com.example.BackupToMnemonicSeed'
+mainClassName = 'com.example.Hmac'
+//mainClassName = 'com.example.BackupToMnemonicSeed'
 //mainClassName = 'com.example.DoubleSpend'
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile 'org.bitcoinj:bitcoinj-core:0.14.5'
+    compile 'com.fressets.wallet:fressets-wallet-common:0.1'
 }
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.github.unafraid.gradle:gradle-git-repo-plugin:2.0.4"
+    }
+}
+
+//settings to fetch github private repository
+gitPublishConfig{
+    org = "fressets"
+    repo = "fressets-wallet-common"
+}
+
+repositories {
+    mavenCentral()
+    maven{
+        url "file://${gitPublishConfig.home}/${gitPublishConfig.org}/${gitPublishConfig.repo}/releases"
+    }
+}
+
